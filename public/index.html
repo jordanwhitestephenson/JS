@@ -1,0 +1,143 @@
+<!doctype html>
+<html class = "">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEMPLATE_BUILDER</title>
+  <script src="scripts/jquery/dist/jquery.min.js"></script>
+  <script src="scripts/semantic-ui-css/semantic.min.js"></script>
+  <script src="scripts/axios/dist/axios.min.js"></script>
+  <script src="scripts/handlebars/dist/handlebars.min.js"></script>
+  <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="form.js"></script>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="crocs.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" id="create">CREATE</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="html">HTML</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="preview">PREVIEW</a>
+  </li>
+</ul>
+<section class="container cs_container-crocs">
+  <div class="create_container">
+    <h1 class = "cx-heavy-brand-font text-center">CREATE</h1>
+    <div class="dropdown">
+      <select id="ddlViewBy" name="dropdown" onchange="dropDownChange(this)">
+        <option class="dropdown-item" id = "blankmodule" value = "blank" >Choose Module</option>
+        <option class="dropdown-item" id = "module1" value = "module1" >MODULE 1</option>
+        <option class="dropdown-item" value = "module2" >MODULE 2</option>
+        <option class="dropdown-item" value = "module3" >MODULE 3</option>
+        </select>
+          <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button>
+    </div>
+
+
+    <!-- //MODULE ONE -->
+    <div class="module1" id = "addModule1">
+      <form action="/action_page.php" class="module_1_form" method="post">
+        <label for="headerText">Header Text</label>
+        <input type="text" name="headerText" id="headerText" value=""><br>
+        <label id="HeaderSize" for="headersize">Header Size</label>
+        <input type="number" name="headersize" id="headersize" value=""><br>
+
+        <label id="img" for="img">Upload Image</label>
+        <input type="text" name="imgLink" id="imgLink" value=""><br>
+
+        <input type="file" name="img" id="img" value=""><br>
+
+        <label for="paragraphText">Paragraph Text</label>
+        <input type="text" name="paragraphText" id="paragraphText" value=""><br>
+
+        <label for="ctaText">CTA TEXT</label>
+        <input type="text" name="ctaText" id="ctaText" value=""><br>
+
+        <label for="ctaLink">CTA LINK</label>
+        <input type="text" name="ctaLink" id="ctaLink" value=""><br>
+      </form>
+      <div class = "button_container">
+        <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE/ADD MODULE</button>
+        <button class="btn btn-secondary" type="button" id="deleteButton" aria-haspopup="true" aria-expanded="false">DELETE</button>
+        <!-- <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button> -->
+      </div>
+    </div>
+    <div id = "add_div_here">
+
+    </div>
+    <div class="module2">
+      <form action="/action_page.php" class="module_2_form" method="post">
+        <label for="headerText">Header Text</label>
+        <input type="text" name="headerText" id="headerText" value=""><br>
+        <label id="HeaderSize" for="headersize">Header Size</label>
+        <input type="number" name="headersize" id="headersize" value=""><br>
+
+        <label id="img" for="img">Upload Image</label>
+        <input type="text" name="imgLink" id="imgLink" value=""><br>
+
+        <input type="file" name="img" id="img" value=""><br>
+
+        <label for="paragraphText">Paragraph Text</label>
+        <input type="text" name="paragraphText" id="paragraphText" value=""><br>
+
+        <label for="ctaText">CTA TEXT</label>
+        <input type="text" name="ctaText" id="ctaText" value=""><br>
+
+        <label for="ctaLink">CTA LINK</label>
+        <input type="text" name="ctaLink" id="ctaLink" value=""><br>
+      </form>
+      <div class = "button_container">
+        <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE/ADD MODULE</button>
+        <button class="btn btn-secondary" type="button" id="deleteButton" aria-haspopup="true" aria-expanded="false">DELETE</button>
+        <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="html_container">
+    <h1 class ="text-center cx-heavy-brand-font">HTML EDITOR</h1>
+  </div>
+  <div class="view_container">
+    <h1 class = "text-center cx-heavy-brand-font">VIEW</h1>
+
+
+
+    <div class="module_1_view_container cs_container-crocs">
+      <div class="col-sm-6">
+        <img id = "viewImg" src="" />
+      </div>
+      <div class="col-sm-6 flex_box_column">
+        <h1 id="viewh1" class="view1 text-center text-uppercase cx-heavy-brand-font"></h1>
+        <p class = "cx-brand-font text-center" id="viewPara"></p>
+        <div class="col-xs-12 flex_box_column " style="">
+          <div class="col-xs-11 col-sm-12 col-md-12 col-lg-10 cx-heavy-brand-font">
+            <a id = "cta_href" href="" class=" cx-button full-width  text-uppercase text-center"></a></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+</section>
+</body>
+</html>
