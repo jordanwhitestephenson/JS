@@ -5,11 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TEMPLATE_BUILDER</title>
-  <script src="scripts/jquery/dist/jquery.min.js"></script>
-  <script src="scripts/semantic-ui-css/semantic.min.js"></script>
-  <script src="scripts/axios/dist/axios.min.js"></script>
-  <script src="scripts/handlebars/dist/handlebars.min.js"></script>
-  <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -38,13 +33,13 @@
   <div class="create_container">
     <h1 class = "cx-heavy-brand-font text-center">CREATE</h1>
     <div class="dropdown">
-      <select id="ddlViewBy" name="dropdown" onchange="dropDownChange(this)">
+      <select id="ddlViewBy" name="dropdown" onchange="dropDownChange()">
         <option class="dropdown-item" id = "blankmodule" value = "blank" >Choose Module</option>
         <option class="dropdown-item" id = "module1" value = "module1" >MODULE 1</option>
         <option class="dropdown-item" value = "module2" >MODULE 2</option>
         <option class="dropdown-item" value = "module3" >MODULE 3</option>
         </select>
-          <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button>
+          <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD MODULE</button>
     </div>
 
 
