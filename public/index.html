@@ -1,5 +1,5 @@
 <!doctype html>
-<html class = "">
+<html class="">
 
 <head>
   <meta charset="UTF-8">
@@ -18,121 +18,81 @@
 <body>
 
 
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" id="create">CREATE</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="html">HTML</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="preview">PREVIEW</a>
-  </li>
-</ul>
-<section class="container cs_container-crocs">
-  <div class="create_container">
-    <h1 class = "cx-heavy-brand-font text-center">CREATE</h1>
-    <div class="dropdown">
-      <select id="ddlViewBy" name="dropdown" onchange="dropDownChange()">
-        <option class="dropdown-item" id = "blankmodule" value = "blank" >Choose Module</option>
-        <option class="dropdown-item" id = "module1" value = "module1" >MODULE 1</option>
-        <option class="dropdown-item" value = "module2" >MODULE 2</option>
-        <option class="dropdown-item" value = "module3" >MODULE 3</option>
-        </select>
-          <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD MODULE</button>
-    </div>
-
-
-    <!-- //MODULE ONE -->
-    <div class="module1" id = "addModule1">
-      <form action="/action_page.php" class="module_1_form" method="post">
-        <label for="headerText">Header Text</label>
-        <input type="text" name="headerText" id="headerText" value=""><br>
-        <label id="HeaderSize" for="headersize">Header Size</label>
-        <input type="number" name="headersize" id="headersize" value=""><br>
-
-        <label id="img" for="img">Upload Image</label>
-        <input type="text" name="imgLink" id="imgLink" value=""><br>
-
-        <input type="file" name="img" id="img" value=""><br>
-
-        <label for="paragraphText">Paragraph Text</label>
-        <input type="text" name="paragraphText" id="paragraphText" value=""><br>
-
-        <label for="ctaText">CTA TEXT</label>
-        <input type="text" name="ctaText" id="ctaText" value=""><br>
-
-        <label for="ctaLink">CTA LINK</label>
-        <input type="text" name="ctaLink" id="ctaLink" value=""><br>
-      </form>
-      <div class = "button_container">
-        <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE/ADD MODULE</button>
-        <button class="btn btn-secondary" type="button" id="deleteButton" aria-haspopup="true" aria-expanded="false">DELETE</button>
-        <!-- <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button> -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="create">CREATE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="html">HTML</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="preview">PREVIEW</a>
+    </li>
+  </ul>
+  <section class="container cs_container-crocs">
+    <div class="create_container">
+      <h1 class="cx-heavy-brand-font text-center">CREATE</h1>
+      <div class="dropdown">
+        <!-- <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE ALL</button> -->
+        <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD MODULE</button>
       </div>
-    </div>
-    <div id = "add_div_here">
 
-    </div>
-    <div class="module2">
-      <form action="/action_page.php" class="module_2_form" method="post">
-        <label for="headerText">Header Text</label>
-        <input type="text" name="headerText" id="headerText" value=""><br>
-        <label id="HeaderSize" for="headersize">Header Size</label>
-        <input type="number" name="headersize" id="headersize" value=""><br>
 
-        <label id="img" for="img">Upload Image</label>
-        <input type="text" name="imgLink" id="imgLink" value=""><br>
+      <!-- //MODULE ONE -->
 
-        <input type="file" name="img" id="img" value=""><br>
+      <div id="add_div_here">
 
-        <label for="paragraphText">Paragraph Text</label>
-        <input type="text" name="paragraphText" id="paragraphText" value=""><br>
-
-        <label for="ctaText">CTA TEXT</label>
-        <input type="text" name="ctaText" id="ctaText" value=""><br>
-
-        <label for="ctaLink">CTA LINK</label>
-        <input type="text" name="ctaLink" id="ctaLink" value=""><br>
-      </form>
-      <div class = "button_container">
-        <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE/ADD MODULE</button>
-        <button class="btn btn-secondary" type="button" id="deleteButton" aria-haspopup="true" aria-expanded="false">DELETE</button>
-        <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button>
       </div>
-    </div>
+      <div class="module2">
+        <form action="/action_page.php" class="module_2_form" method="post">
+          <label for="headerText">Header Text</label>
+          <input type="text" name="headerText" id="headerText" value=""><br>
+          <label id="HeaderSize" for="headersize">Header Size</label>
+          <input type="number" name="headersize" id="headersize" value=""><br>
 
-  </div>
+          <label id="img" for="img">Upload Image</label>
+          <input type="text" name="imgLink" id="imgLink" value=""><br>
 
+          <input type="file" name="img" id="img" value=""><br>
 
+          <label for="paragraphText">Paragraph Text</label>
+          <input type="text" name="paragraphText" id="paragraphText" value=""><br>
 
-  <div class="html_container">
-    <h1 class ="text-center cx-heavy-brand-font">HTML EDITOR</h1>
-  </div>
-  <div class="view_container">
-    <h1 class = "text-center cx-heavy-brand-font">VIEW</h1>
+          <label for="ctaText">CTA TEXT</label>
+          <input type="text" name="ctaText" id="ctaText" value=""><br>
 
-
-
-    <div class="module_1_view_container cs_container-crocs">
-      <div class="col-sm-6">
-        <img id = "viewImg" src="" />
-      </div>
-      <div class="col-sm-6 flex_box_column">
-        <h1 id="viewh1" class="view1 text-center text-uppercase cx-heavy-brand-font"></h1>
-        <p class = "cx-brand-font text-center" id="viewPara"></p>
-        <div class="col-xs-12 flex_box_column " style="">
-          <div class="col-xs-11 col-sm-12 col-md-12 col-lg-10 cx-heavy-brand-font">
-            <a id = "cta_href" href="" class=" cx-button full-width  text-uppercase text-center"></a></div>
+          <label for="ctaLink">CTA LINK</label>
+          <input type="text" name="ctaLink" id="ctaLink" value=""><br>
+        </form>
+        <div class="button_container">
+          <button class="btn btn-secondary" type="button" id="saveButton" aria-haspopup="true" aria-expanded="false">SAVE/ADD MODULE</button>
+          <button class="btn btn-secondary" type="button" id="deleteButton" aria-haspopup="true" aria-expanded="false">DELETE</button>
+          <button class="btn btn btn-success" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">ADD ANOTHER MODULE</button>
         </div>
       </div>
+
     </div>
 
 
 
+    <div class="html_container">
+      <h1 class="text-center cx-heavy-brand-font">HTML EDITOR</h1>
+    </div>
+    <div class="view_container">
+      <h1 class="text-center cx-heavy-brand-font">VIEW</h1>
+
+      <div class="FIRST_VIEW_CONTAINER flex_box_row cs_container-crocs"></div>
+      <div class="SECOND_VIEW_CONTAINER flex_box_row cs_container-crocs"></div>
+      <div class="THIRD_VIEW_CONTAINER">
+
+      </div>
 
 
-  </div>
-</section>
+
+
+
+    </div>
+  </section>
 </body>
+
 </html>
